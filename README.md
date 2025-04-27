@@ -3,6 +3,7 @@ the original source code for the tetoware.cc website
 
 due to problems, i have decided to release the full source code of the website ONLY.
 
+You can read more in the pgp message left by me on the website: https://tetoware.neocities.org/canopy.txt
 
 # Licencia
 Este proyecto está licenciado bajo la GNU General Public License v3.0 (GPLv3).
