@@ -1,5 +1,6 @@
 # tetoware-website
 the original source code for the tetoware.cc website
+due to problems, i have decided to release the full source code of the website ONLY.
 
 
 # Licencia
@@ -15,7 +16,7 @@ Si se utiliza este código como base para otro proyecto, el proyecto derivado de
 
 El objetivo de esta licencia es proteger el trabajo original de usos indebidos o apropiaciones cerradas, especialmente de aquellas personas que hayan participado originalmente en su desarrollo pero que no respeten la autoría ni el espíritu de colaboración.
 
-Este proyecto fue desarrollado mayoritariamente por canopy420, quien conserva los derechos de autor sobre su contribución principal.
+Este proyecto fue desarrollado mayoritariamente por canopy420/Kryx, quien conserva los derechos de autor sobre su contribución principal.
 
 Para más detalles, puedes consultar el texto completo de la licencia en: https://www.gnu.org/licenses/gpl-3.0.html
 
@@ -32,6 +33,6 @@ If this code is used as the basis for another project, the derivative project mu
 
 The purpose of this license is to protect the original work from misuse or unauthorized appropriation, especially by individuals who were initially involved in its development but do not respect the authorship or the spirit of collaboration.
 
-This project was mainly developed by canopy420, who retains the copyright over their principal contribution.
+This project was mainly developed by canopy420/Kryx, who retains the copyright over their principal contribution.
 
 For more details, you can review the full license text at: https://www.gnu.org/licenses/gpl-3.0.html
