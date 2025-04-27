@@ -5,6 +5,9 @@ due to problems, i have decided to release the full source code of the website O
 
 You can read more in the pgp message left by me on the website: https://tetoware.neocities.org/canopy.txt
 
+![image](https://github.com/user-attachments/assets/3b568f49-7a50-4b63-9e5f-ec7ca6015993)
+
+
 # Licencia
 Este proyecto está licenciado bajo la GNU General Public License v3.0 (GPLv3).
 
