@@ -1,0 +1,422 @@
+@font-face {
+    font-family: Poppins;
+    src: url(resources/Poppins-Regular.ttf);
+  }
+  
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    background-color: black;
+    color: white;
+    image-rendering: optimizespeed;
+    font-family: Poppins;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    overflow-y: auto;
+    font-size: 16px; 
+  }
+  
+  #dots-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+  }
+  
+  #preload {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 50px;
+    transition: 0.6s;
+  }
+  
+  #hidden {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+  
+  /* Header corregido */
+  header {
+    background-color: rgba(12, 12, 12, 0.8);
+    width: 100%;
+    padding: 10px 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    overflow: hidden;
+  }
+  
+  header::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(90deg, #0c2eec97, #501ef5, #0c2eec97);
+    background-size: 200% 100%;
+    animation: borderAnimation 3s linear infinite;
+  }
+  
+  @keyframes borderAnimation {
+    0% {
+      background-position: 100% 0;
+    }
+    100% {
+      background-position: -100% 0;
+    }
+  }
+  
+  nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  nav ul li {
+    display: inline;
+  }
+  
+  nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.2rem;
+  }
+  
+  nav ul li a:hover {
+    text-decoration: underline;
+  }
+  
+  .smalogo {
+    width: 90px;
+    position: absolute;
+    left: 20px; /* Ajustado para móviles */
+  }
+  
+  section {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  
+  .mainlogo {
+    font-size: 100px;
+    color: transparent;
+    background-image: url("resources/logo.gif");
+    background-repeat: repeat-x;
+    font-size: bolder;
+    background-size: cover;
+    background-clip: text;
+    -webkit-background-clip: text;
+    animation: text 5s linear infinite;
+  }
+  
+  @keyframes text {
+    0% {
+      background-position: 0 0;
+    }
+    50% {
+      background-position: 2000px 0;
+    }
+  }
+  
+  .flex-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    width: 100%;
+  }
+  
+  .flex-container > div {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+    -webkit-backdrop-filter: blur(20px);
+    backdrop-filter: blur(20px);
+    box-shadow: 0.8px 32px 0 rgba(0, 0, 0, 0.37);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    border-radius: 10px;
+    padding: 15px;
+    width: 500px;
+    height: 400px;
+    transition: transform 0.5s ease-out;
+  }
+  
+  .flex-container > div:hover {
+    transform: translateY(-10px);
+    color: #4973ff;
+  }
+  
+  .y2klogo {
+    position: absolute;
+    margin-top: 10vw;
+    left: 50px;
+    width: 30vw;
+    transform: perspective(500px) rotateY(20deg) translateY(-5px);
+  }
+  
+  .cheatmenu {
+    position: absolute;
+    margin-top: 50vw;
+    left: 90px;
+    right: 10px;
+    width: 30vw;
+    padding: 20px;
+    box-shadow: 10px 10px 30px rgba(255, 255, 255, 0.8);
+    transform: perspective(600px) rotateX(5deg) rotateY(-5deg);
+    transition: transform 0.2s ease-out, box-shadow 0.2s ease-out;
+  }
+  
+  .cheatmenu:hover {
+    transform: perspective(600px) rotateX(-5deg) rotateY(5deg) translateZ(-10px);
+    box-shadow: 5px 5px 20px rgba(200, 200, 200, 0.6);
+  }
+  
+  .cheatmenu::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at 30% 30%, rgba(255, 255, 255, 0.1), transparent);
+    border-radius: 10px;
+    transition: opacity 0.3s ease-out;
+  }
+  
+  .cheatmenu:hover::after {
+    opacity: 0.3;
+  }
+  
+  .showcasetext {
+    position: absolute;
+    margin-top: 35vw;
+    left: 60vw;
+  }
+  
+  .faq-container {
+    max-width: 600px;
+    margin-top: 40px;
+  }
+  
+  .faq-item {
+    border: 1px solid #444;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    overflow: hidden;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .faq-question {
+    background-color: #1e1e1e;
+    padding: 15px;
+    cursor: pointer;
+    font-size: 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .faq-question:hover {
+    background-color: #292929;
+  }
+  
+  .faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    padding: 0 15px;
+    background-color: #2a2a2a;
+    transition: max-height 0.3s ease-out;
+  }
+  
+  .faq-item.active .faq-answer {
+    max-height: 1000px;
+    padding: 15px;
+  }
+  
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  .download {
+    position: relative;
+    padding: 20px 50px;
+    display: block;
+    text-decoration: none;
+    text-transform: uppercase;
+    width: 200px;
+    overflow: hidden;
+    border-radius: 40px;
+  }
+  
+  .download span {
+    position: relative;
+    color: #fff;
+    font-size: 20px;
+    font-family: Arial;
+    letter-spacing: 8px;
+    z-index: 1;
+  }
+  
+  .download .liquid {
+    position: absolute;
+    top: -80px;
+    left: 0;
+    width: 200px;
+    height: 200px;
+    background: #4973ff;
+    box-shadow: inset 0 0 50px rgba(0, 0, 0, .5);
+    transition: .5s;
+  }
+  
+  .download .liquid::after,
+  .download .liquid::before {
+    content: '';
+    width: 200%;
+    height: 200%;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -75%);
+    background: #000;
+  }
+  
+  .download .liquid::before {
+    border-radius: 45%;
+    background: rgba(20, 20, 20, 1);
+    animation: animate 5s linear infinite;
+  }
+  
+  .download .liquid::after {
+    border-radius: 40%;
+    background: rgba(20, 20, 20, .5);
+    animation: animate 10s linear infinite;
+  }
+  
+  .download:hover .liquid {
+    top: -120px;
+  }
+  
+  @keyframes animate {
+    0% {
+      transform: translate(-50%, -75%) rotate(0deg);
+    }
+    100% {
+      transform: translate(-50%, -75%) rotate(360deg);
+    }
+  }
+  
+  footer {
+    color: gray;
+    position: relative;
+    right: 700px;
+    text-align: left;
+    padding-bottom: 30px;
+  }
+  
+  @media (max-width: 768px) {
+    body {
+      font-size: 14px;
+    }
+  
+    .mainlogo {
+      font-size: 60px;
+    }
+  
+    .flex-container {
+      flex-direction: column;
+    }
+  
+    .flex-container > div {
+      width: 80%;
+      height: auto;
+    }
+  
+    .y2klogo, .cheatmenu {
+      width: 80%;
+      left: 10%;
+      margin-top: 20vw;
+    }
+  
+    .showcasetext {
+      left: 10%;
+      margin-top: 50vw;
+    }
+  
+    footer {
+      right: 0;
+      text-align: center;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    body {
+      font-size: 12px;
+    }
+  .smalogo{
+    display: none;
+  }
+  .sectit{
+    display: none;
+  }
+    .mainlogo {
+      font-size: 40px;
+    }
+  
+    nav ul li a {
+      font-size: 1rem;
+    }
+  
+    .y2klogo,
+    .cheatmenu {
+      display: none; 
+    }
+  
+    .showcasetext {
+      left: 5%;
+      margin-top: 60vw;
+    }
+  
+    .download {
+      width: 150px;
+      padding: 15px 30px;
+    }
+  
+    .download span {
+      font-size: 16px;
+    }
+  
+    .download .liquid {
+      width: 150px;
+      height: 150px;
+    }
+  
+    .download:hover .liquid {
+      top: -100px;
+    }
+  
+    footer {
+      right: 0;
+      text-align: center;
+      padding: 20px;
+    }
+  }
